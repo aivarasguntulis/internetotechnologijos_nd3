@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  web:
+    build: .              # <--- ČIA SVARBIAUSIA
+    container_name: nd3-php-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+    environment:
+      MONGO_URI: mongodb://nd3user:nd3pass@92.62.143.23:27017/nd3projektas
+
+    
